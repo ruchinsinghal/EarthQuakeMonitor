@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cEB-VA-8fx">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Summary-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="EarthQuakeSummaryViewC" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="EarthQuakeSummaryViewC" customModule="EarthQuakeMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ymW-Lq-wcB">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EarthQuakeSummaryTableViewCell" id="E54-Tg-93Z" customClass="EarthQuakeSummaryTableViewCell" customModule="EarthQuakeMonitor" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E54-Tg-93Z" id="Dvo-Ex-vqn">
+                                            <rect key="frame" x="0.0" y="0.0" width="295.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6OT-VV-gVJ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="aQG-aG-646"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ymW-Lq-wcB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Uz-cW-MXA"/>
+                            <constraint firstItem="ymW-Lq-wcB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="B9p-20-RvQ"/>
+                            <constraint firstItem="ymW-Lq-wcB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Cya-oM-ZFQ"/>
+                            <constraint firstItem="ymW-Lq-wcB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ci6-ZO-ZgA"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" title="Summary" id="5dw-ZG-fAQ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="JtS-xp-IZq">
+                            <connections>
+                                <action selector="tapRefresh:" destination="BYZ-38-t0r" id="hG3-Cn-uJ2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tblViewSummary" destination="ymW-Lq-wcB" id="8Dx-6p-rde"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="113.02816901408451"/>
+        </scene>
+        <!--Earth Quake Detail ViewC-->
+        <scene sceneID="mtC-Ar-ZQs">
+            <objects>
+                <viewController storyboardIdentifier="EarthQuakeDetailViewC" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="H5T-4k-sNA" customClass="EarthQuakeDetailViewC" customModule="EarthQuakeMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="37r-Wn-oes">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magnitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnR-Fk-5P2">
+                                <rect key="frame" x="20" y="56" width="96" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="c3j-8F-TD7"/>
+                                    <constraint firstAttribute="height" constant="24" id="qbN-fU-hw8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="055-yb-UsX">
+                                <rect key="frame" x="132" y="56" width="168" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Fms-ue-EzM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date &amp; Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMf-rp-vuz">
+                                <rect key="frame" x="20" y="92" width="96" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Opm-QQ-G6c"/>
+                                    <constraint firstAttribute="width" constant="96" id="ied-bf-OlD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyb-gQ-VjT">
+                                <rect key="frame" x="132" y="92" width="168" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="bwo-VZ-p9x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BU-Yy-ClY">
+                                <rect key="frame" x="20" y="128" width="96" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Y42-lw-9Df"/>
+                                    <constraint firstAttribute="width" constant="96" id="aZe-uX-3hd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ue9-b7-mtR">
+                                <rect key="frame" x="132" y="128" width="168" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="1MF-MS-mQA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="k2n-Z4-0KU">
+                                <rect key="frame" x="0.0" y="172" width="320" height="396"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3As-G1-dGy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FnR-Fk-5P2" firstAttribute="top" secondItem="3As-G1-dGy" secondAttribute="top" constant="12" id="5QC-2r-f3X"/>
+                            <constraint firstItem="aMf-rp-vuz" firstAttribute="leading" secondItem="3As-G1-dGy" secondAttribute="leading" constant="20" id="7By-aO-g8b"/>
+                            <constraint firstItem="3As-G1-dGy" firstAttribute="trailing" secondItem="ue9-b7-mtR" secondAttribute="trailing" constant="20" id="9SK-oQ-IUz"/>
+                            <constraint firstItem="oyb-gQ-VjT" firstAttribute="top" secondItem="aMf-rp-vuz" secondAttribute="top" id="ARZ-J8-IMl"/>
+                            <constraint firstItem="k2n-Z4-0KU" firstAttribute="bottom" secondItem="37r-Wn-oes" secondAttribute="bottom" id="D8l-W7-u8Y"/>
+                            <constraint firstItem="ue9-b7-mtR" firstAttribute="top" secondItem="1BU-Yy-ClY" secondAttribute="top" id="J0z-xB-8iy"/>
+                            <constraint firstItem="055-yb-UsX" firstAttribute="leading" secondItem="FnR-Fk-5P2" secondAttribute="trailing" constant="16" id="KD9-rj-fSt"/>
+                            <constraint firstItem="k2n-Z4-0KU" firstAttribute="leading" secondItem="3As-G1-dGy" secondAttribute="leading" id="KE3-PM-6v4"/>
+                            <constraint firstItem="1BU-Yy-ClY" firstAttribute="leading" secondItem="3As-G1-dGy" secondAttribute="leading" constant="20" id="Lsa-8H-tRR"/>
+                            <constraint firstItem="k2n-Z4-0KU" firstAttribute="trailing" secondItem="3As-G1-dGy" secondAttribute="trailing" id="Mkv-pw-IWq"/>
+                            <constraint firstItem="3As-G1-dGy" firstAttribute="trailing" secondItem="055-yb-UsX" secondAttribute="trailing" constant="20" id="NFE-aJ-tCf"/>
+                            <constraint firstItem="055-yb-UsX" firstAttribute="top" secondItem="FnR-Fk-5P2" secondAttribute="top" id="gvG-3D-wv7"/>
+                            <constraint firstItem="oyb-gQ-VjT" firstAttribute="leading" secondItem="aMf-rp-vuz" secondAttribute="trailing" constant="16" id="hyP-It-J7n"/>
+                            <constraint firstItem="1BU-Yy-ClY" firstAttribute="top" secondItem="aMf-rp-vuz" secondAttribute="bottom" constant="12" id="jJV-ET-5h1"/>
+                            <constraint firstItem="k2n-Z4-0KU" firstAttribute="top" secondItem="ue9-b7-mtR" secondAttribute="bottom" constant="20" id="lnJ-t8-Ij7"/>
+                            <constraint firstItem="FnR-Fk-5P2" firstAttribute="leading" secondItem="3As-G1-dGy" secondAttribute="leading" constant="20" id="mvH-XV-UaD"/>
+                            <constraint firstItem="aMf-rp-vuz" firstAttribute="top" secondItem="FnR-Fk-5P2" secondAttribute="bottom" constant="12" id="nx1-ls-3KO"/>
+                            <constraint firstItem="3As-G1-dGy" firstAttribute="trailing" secondItem="oyb-gQ-VjT" secondAttribute="trailing" constant="20" id="r8H-3f-5FD"/>
+                            <constraint firstItem="ue9-b7-mtR" firstAttribute="leading" secondItem="1BU-Yy-ClY" secondAttribute="trailing" constant="16" id="uvp-o8-2Ki"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="lblDateTime" destination="oyb-gQ-VjT" id="R7M-Zf-oaa"/>
+                        <outlet property="lblLocation" destination="ue9-b7-mtR" id="grh-K0-1T6"/>
+                        <outlet property="lblMagnitude" destination="055-yb-UsX" id="3Wv-sj-dkY"/>
+                        <outlet property="mapView" destination="k2n-Z4-0KU" id="1NP-j6-RUH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zXR-EL-QGW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771.875" y="113.02816901408451"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5RJ-gJ-38A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cEB-VA-8fx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wed-kF-DgJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kPG-ti-kkk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jzO-hD-u1O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
